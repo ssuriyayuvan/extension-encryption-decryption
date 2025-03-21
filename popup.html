@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 400px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .section {
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #f5f5f5;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    textarea {
+      width: 100%;
+      min-height: 60px;
+      margin-bottom: 8px;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      padding: 8px 12px;
+      background: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    button:hover {
+      background: #3367d6;
+    }
+    .result {
+      margin-top: 8px;
+      font-size: 0.9em;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 8px;
+      background: #e8f0fe;
+      border-radius: 4px;
+      color: #174ea6;
+    }
+  </style>
+</head>
+<body>
+  <h2>ECIES Encryption Tool</h2>
+  
+  <div class="section">
+    <button id="genKeysBtn">Generate New Keys</button>
+    <div id="status">Status: Ready</div>
+  </div>
+  
+  <div class="section">
+    <label for="plaintextInput">Text to Encrypt:</label>
+    <textarea id="plaintextInput" placeholder="Enter text to encrypt"></textarea>
+    <button id="encryptBtn">Encrypt</button>
+  </div>
+  
+  <div class="section">
+    <label for="encryptedInput">Encrypted Text:</label>
+    <textarea id="encryptedInput" placeholder="Enter encrypted text to decrypt"></textarea>
+    <button id="decryptBtn">Decrypt</button>
+  </div>
+  
+  <div class="section">
+    <label for="resultOutput">Result:</label>
+    <textarea id="resultOutput" readonly></textarea>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
